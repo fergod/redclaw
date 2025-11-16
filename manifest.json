@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "小红爪子",
+  "version": "1.0",
+  "description": "批量统计小红书链接信息并导出Excel",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.xiaohongshu.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "小红爪子"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["libs/xlsx.full.min.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
